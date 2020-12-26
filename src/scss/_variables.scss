@@ -1,0 +1,21 @@
+// Grid
+
+$padding-unit: 15px;
+
+$breakpoints: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+);
+
+$breakpoints_large: (
+    x2: 1400px,
+    x3: 1600px,
+    x4: 1800px,
+    x5: 2500px
+);
+
+// Style
+
+$border-radius: 6px;

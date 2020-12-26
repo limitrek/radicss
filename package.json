@@ -1,0 +1,31 @@
+{
+  "name": "@limitrek/radicss",
+  "version": "1.0.0",
+  "description": "A simple CSS framework.",
+  "license": "AGPL-3.0",
+  "keywords": [
+    "css"
+  ],
+  "homepage": "https://github.com/limitrek/radicss#readme",
+  "author": "LiMiTreK",
+  "contributors": [
+    "Jose J. Fernández"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/limitrek/radicss.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "css-build": "sass --style expanded --source-map --embed-sources --no-error-css src/scss/:dist/css/",
+    "css-minify": "cleancss -O1 specialComments:0 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/inline.min.css dist/css/inline.css"
+  },
+  "bugs": {
+    "url": "https://github.com/limitrek/radicss/issues"
+  },
+  "devDependencies": {
+    "bootstrap": "4.5.3",
+    "clean-css-cli": "^4.3.0",
+    "sass": "^1.30.0"
+  }
+}

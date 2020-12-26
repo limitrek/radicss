@@ -1,0 +1,50 @@
+.row {
+
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-left: -$padding-unit;
+    margin-right: -$padding-unit;
+
+    &.no-wrap {
+        flex-wrap: nowrap;
+    }
+
+    > * {
+        padding-left: $padding-unit;
+        padding-right: $padding-unit;
+    }
+
+    @each $columns in 12, 15 {
+        @for $i from 1 through $columns {
+            > .col-#{$i}-#{$columns} {
+                flex: 0 0 percentage($i / $columns);
+            }
+        }
+    }
+
+    @each $name, $resolution in $breakpoints {
+        @media (min-width: $resolution) {
+            @each $columns in 12, 15 {
+                @for $i from 1 through $columns {
+                    > .col-#{$name}-#{$i}-#{$columns} {
+                        flex: 0 0 percentage($i / $columns);
+                    }
+                }
+            }
+        }
+    }
+
+    @each $name, $resolution in $breakpoints_large {
+        @media (min-width: $resolution) {
+            @each $columns in 12, 15 {
+                @for $i from 1 through $columns {
+                    > .col-#{$name}-#{$i}-#{$columns} {
+                        flex: 0 0 percentage($i / $columns);
+                    }
+                }
+            }
+        }
+    }
+
+}

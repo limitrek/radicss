@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Radicss</title>
+
+        <link rel="stylesheet" type="text/css" href="dist/css/inline.min.css">
+
+        <style>
+
+            .css-body {
+                background: #f4f4f4;
+            }
+
+            .css-wrapper {
+                background: white;
+                border: 1px solid #ccc;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+
+            .css-header {
+                background:#efe;
+            }
+
+        </style>
+
+    </head>
+    <body class="css-body">
+
+        <div class="container css-wrapper">
+
+            <header class="fill-container css-header">
+
+                <h1>Radicss</h1>
+                <p>A simple CSS framework.</p>
+
+            </header>
+
+            <main>
+
+                <h2>Containers</h2>
+
+                <p>
+                    Radicss utilizes two classes to wrap content: <code>.container</code> and <code>.container-fluid</code>.
+                    The former has a maximum width set for each of the breakpoints we have defined. The later utilizes
+                    100% of the available width in all situations.
+                </p>
+
+                <p>
+                    The following breakpoints have been defined in Radicss:
+                </p>
+
+                <ul>
+                    <li>sm: 576px</li>
+                    <li>md: 768px</li>
+                    <li>lg: 992px</li>
+                    <li>xl: 1200px</li>
+                    <li>x2: 1400px (add <code>.x2</code> to your container to enable this size)</li>
+                    <li>x3: 1600px (add <code>.x3</code> to your container to enable this size)</li>
+                    <li>x4: 1800px (add <code>.x4</code> to your container to enable this size)</li>
+                    <li>x5: 2500px (add <code>.x5</code> to your container to enable this size)</li>
+                </ul>
+
+                <h2>Grid system</h2>
+
+                <p>
+                    Radicss has two grids, one with 12 cols and other with 15 cols. To use them, place an element with
+                    the <code>.row</code> class inside a container and you will be able to put columns inside it using
+                    the <code>.col-*</code> classes.
+                </p>
+
+                <p>
+                    The column classes can be read as follows:
+                </p>
+
+                <p>
+                    <code>.col-{useThisManySpaces}-{outOfThis}</code>
+                </p>
+
+                <h3>12-col grid</h3>
+
+                <p></p>
+
+                <section class="row">
+                    <div class="col-12-12" style="background: #eee">col-12-12</div>
+                    <div class="col-6-12" style="background: #ddd">col-6-12</div>
+                    <div class="col-6-12" style="background: #ccc">col-6-12</div>
+                    <div class="col-4-12" style="background: #bbb">col-4-12</div>
+                    <div class="col-4-12" style="background: #aaa">col-4-12</div>
+                    <div class="col-4-12" style="background: #999">col-4-12</div>
+                </section>
+
+                <h3>15-col grid</h3>
+
+                <section class="row">
+                    <div class="col-15-15" style="background: #eee">col-15-15</div>
+                    <div class="col-5-15" style="background: #ddd">col-5-15</div>
+                    <div class="col-5-15" style="background: #ccc">col-5-15</div>
+                    <div class="col-5-15" style="background: #bbb">col-5-15</div>
+                    <div class="col-3-15" style="background: #aaa">col-3-15</div>
+                    <div class="col-3-15" style="background: #999">col-3-15</div>
+                    <div class="col-3-15" style="background: #888">col-3-15</div>
+                    <div class="col-3-15" style="background: #777">col-3-15</div>
+                    <div class="col-3-15" style="background: #666">col-3-15</div>
+                </section>
+
+                <h3>Responsive breakpoints</h3>
+
+                <p>
+                    In the previous section a col always has the same width no matter which screen size is being used.
+                    To add responsiveness to the grid system, use a column class with a breakpoint, such as
+                    <code>.col-sm-6-12</code>.
+                </p>
+
+                <p>
+                    The responsive column classes can be read as follows:
+                </p>
+
+                <p>
+                    <code>.col-{atThisScreenSizeAndAbove}-{useThisManySpaces}-{outOfThis}</code>
+                </p>
+
+                <p>
+                    For example, the following class:
+                </p>
+
+                <p>
+                    <code>col-12-12 col-sm-6-12 col-md-4-12 col-lg-3-12</code>
+                </p>
+
+                <p>
+                    Can be read as follows:
+                </p>
+
+                <ul>
+                    <li>col uses 12 out of 12 at the smallest screen size</li>
+                    <li>At sm size (576px), col uses 6 out of 12</li>
+                    <li>At md size (768px), col uses 4 out of 12</li>
+                    <li>At lg size (992px), col uses 3 out of 12</li>
+                    <li>Although the xl size is not stated, the col will use 3 out of 12</li>
+                </ul>
+
+                <p>
+                    See what happens when you lay a bunch of columns with the previous class inside a row:
+                </p>
+
+                <section class="row">
+                    <div class="col-12-12 col-sm-6-12 col-md-4-12 col-lg-3-12" style="background: #eee">12, 6, 4, 3</div>
+                    <div class="col-12-12 col-sm-6-12 col-md-4-12 col-lg-3-12" style="background: #ddd">12, 6, 4, 3</div>
+                    <div class="col-12-12 col-sm-6-12 col-md-4-12 col-lg-3-12" style="background: #ccc">12, 6, 4, 3</div>
+                    <div class="col-12-12 col-sm-6-12 col-md-4-12 col-lg-3-12" style="background: #bbb">12, 6, 4, 3</div>
+                    <div class="col-12-12 col-sm-6-12 col-md-4-12 col-lg-3-12" style="background: #aaa">12, 6, 4, 3</div>
+                    <div class="col-12-12 col-sm-6-12 col-md-4-12 col-lg-3-12" style="background: #999">12, 6, 4, 3</div>
+                    <div class="col-12-12 col-sm-6-12 col-md-4-12 col-lg-3-12" style="background: #888; color: white">12, 6, 4, 3</div>
+                    <div class="col-12-12 col-sm-6-12 col-md-4-12 col-lg-3-12" style="background: #777; color: white">12, 6, 4, 3</div>
+                    <div class="col-12-12 col-sm-6-12 col-md-4-12 col-lg-3-12" style="background: #666; color: white">12, 6, 4, 3</div>
+                    <div class="col-12-12 col-sm-6-12 col-md-4-12 col-lg-3-12" style="background: #555; color: white">12, 6, 4, 3</div>
+                    <div class="col-12-12 col-sm-6-12 col-md-4-12 col-lg-3-12" style="background: #444; color: white">12, 6, 4, 3</div>
+                </section>
+
+            </main>
+
+        </div>
+
+    </body>
+</html>

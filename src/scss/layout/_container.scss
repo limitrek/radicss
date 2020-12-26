@@ -1,0 +1,33 @@
+.container,
+.container-fluid {
+    width: 100%;
+    padding-left: $padding-unit;
+    padding-right: $padding-unit;
+    margin-right: auto;
+    margin-left: auto;
+
+    > .fill-container {
+        margin-left: -$padding-unit;
+        padding-left: $padding-unit;
+        margin-right: -$padding-unit;
+        padding-right: $padding-unit;
+        overflow: auto;
+    }
+
+}
+
+@each $name, $size in $breakpoints {
+    @media (min-width: $size) {
+        .container {
+            width: $size - ($padding-unit * 2);
+        }
+    }
+}
+
+@each $name, $size in $breakpoints_large {
+    @media (min-width: $size) {
+        .container.#{$name} {
+            width: $size - ($padding-unit * 2);
+        }
+    }
+}
